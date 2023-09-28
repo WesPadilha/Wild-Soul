@@ -18,10 +18,6 @@ public class DeathScenery : MonoBehaviour
             {
                 controle2.TakeDamage(dano);
             }
-            else
-            {
-                Debug.Log ("Controle não encontrado");
-            }
         }
     } 
 }
