@@ -6,10 +6,8 @@ public class CameraActivationControl : MonoBehaviour
     public GameObject mainCamera;
     public GameObject[] playerCameras;
     public float activationDistance = 10f;
-
     private bool mainCameraActive = true;
     private MainCamera mainCameraFollow;
-
     private void Start()
     {
         mainCameraFollow = mainCamera.GetComponent<MainCamera>();
@@ -44,7 +42,6 @@ public class CameraActivationControl : MonoBehaviour
 
             mainCameraActive = true;
 
-            // Reposicione a câmera principal para a posição inicial.
             mainCameraFollow.ResetToInitialPosition();
         }
     }

@@ -7,33 +7,33 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public CharacterController controller;
-
     private Vector3 moveDirection;
     public float gravityScale;
-
     public Animator Animate;
-
     public Transform pivot;
     public float rotateSpeed;
-
     public GameObject playerModel;
-
+    private bool isAttacking = false;
+    private GameObject zarabatana;
     public LifeBar barra;
     private float vida = 100;
-
+    
     public void TakeDamage(float dano)
     {
         vida -= dano;
         barra.AlterarVida(vida);
     }
-
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        zarabatana = transform.Find("Zarabatana").gameObject;
+        zarabatana.SetActive(false);
     }
 
     void Update()
     {
+        isAttacking = false;
         float yStore = moveDirection.y;
         moveDirection = (Vector3.forward * Input.GetAxis("Vertical")) 
             + (Vector3.right * Input.GetAxis("Horizontal"));
@@ -51,9 +51,18 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Animate.SetBool("Jump", false);
-            }
+            }   
         }
-
+        if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
+        {
+            isAttacking = true;
+            Animate.SetTrigger("Attack");
+            zarabatana.SetActive(true);
+        }
+        else
+        {
+            zarabatana.SetActive(false);
+        }
         moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
         controller.Move(moveDirection * Time.deltaTime);
 

@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         if (!useOffsetValues)
-        {
+            {
             var position = target.position;
 
             offset = target.position - transform.position;
