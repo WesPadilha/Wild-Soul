@@ -12,7 +12,7 @@ public class Zarabatana : MonoBehaviour
 
     private float tempoUltimoDisparo;
     public float intervaloEntreDisparos = 1.0f;
-    public float atrasoDisparo = 0.5f; // Tempo de atraso antes de atirar
+    public float atrasoDisparo = 0.5f; 
 
     private void Start()
     {
@@ -36,27 +36,21 @@ public class Zarabatana : MonoBehaviour
     }
 
     void Atirar()
-    {
-        Transform cameraTransform = Camera.main.transform;
+    { 
+        Vector3 direcaoCamera = transform.forward;
 
-        Vector3 direcaoCamera = cameraTransform.forward;
-
-        Quaternion rotacaoPersonagem = transform.rotation;
-
-        Vector3 direcaoGlobal = rotacaoPersonagem * direcaoCamera;
-
-        GameObject FlechaProj = Instantiate(prefabProjetil, ponta.position, Quaternion.identity);
+        GameObject FlechaProj = Instantiate(prefabProjetil, ponta.position, Quaternion.LookRotation(direcaoCamera));
         Projetil flecha = FlechaProj.GetComponent<Projetil>();
 
         RaycastHit localAtingidoRaycast;
 
-        if (Physics.Raycast(ponta.position, direcaoGlobal, out localAtingidoRaycast, Mathf.Infinity))
+        if (Physics.Raycast(ponta.position, direcaoCamera, out localAtingidoRaycast, Mathf.Infinity))
         {
             flecha.posicaoAlvo = localAtingidoRaycast.point;
         }
         else
         {
-            flecha.posicaoAlvo = ponta.position + direcaoGlobal * 25f;
+            flecha.posicaoAlvo = ponta.position + direcaoCamera * 25f;
         }
     }
 }

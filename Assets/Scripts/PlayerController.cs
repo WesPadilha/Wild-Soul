@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -33,7 +34,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        isAttacking = false;
         float yStore = moveDirection.y;
         moveDirection = (Vector3.forward * Input.GetAxis("Vertical")) 
             + (Vector3.right * Input.GetAxis("Horizontal"));
@@ -58,10 +58,8 @@ public class PlayerController : MonoBehaviour
             isAttacking = true;
             Animate.SetTrigger("Attack");
             zarabatana.SetActive(true);
-        }
-        else
-        {
-            zarabatana.SetActive(false);
+            StartCoroutine(nameof(WaitAttack));
+            
         }
         moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
         controller.Move(moveDirection * Time.deltaTime);
@@ -82,6 +80,12 @@ public class PlayerController : MonoBehaviour
         {
             ReiniciarJogo();
         }
+    }
+    IEnumerator WaitAttack()
+    {
+        yield return new WaitForSeconds(1f);
+        zarabatana.SetActive(false);
+        isAttacking = false;
     }
     private void ReiniciarJogo()
         {
