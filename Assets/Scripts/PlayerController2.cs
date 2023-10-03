@@ -17,7 +17,7 @@ public class PlayerController2 : MonoBehaviour
     public GameObject playerModel;
 
     public LifeBar barra;
-    private float vida = 100;
+    private float vida = 200;
 
     public void TakeDamage(float dano)
     {

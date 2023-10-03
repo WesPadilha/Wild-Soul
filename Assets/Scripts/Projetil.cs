@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projetil : MonoBehaviour
 {
-    private float velocidade = 30;
+    private float velocidade = 50;
     private float TempoDestruir = 3f;
 
     [SerializeField]
@@ -25,7 +25,7 @@ public class Projetil : MonoBehaviour
 
         if (inimigo != null)
         {
-            inimigo.TakeDamageInimigo(20f);
+            inimigo.TakeDamageInimigo(35f);
         }
 
         Destroy(gameObject);

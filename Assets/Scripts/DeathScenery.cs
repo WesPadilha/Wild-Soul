@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeathScenery : MonoBehaviour
 {
-    public float dano = 100f; 
+    public float dano = 1000f; 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
