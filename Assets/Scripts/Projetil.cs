@@ -19,11 +19,11 @@ public class Projetil : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, posicaoAlvo, velocidade  * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Inimigos inimigo = collision.gameObject.GetComponent<Inimigos>();
+        Inimigos inimigo = other.gameObject.GetComponent<Inimigos>();
 
-        if(inimigo != null)
+        if (inimigo != null)
         {
             inimigo.TakeDamageInimigo(20f);
         }

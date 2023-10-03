@@ -1108,6 +1108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6661878891240418440}
   - component: {fileID: 4526237102250419408}
+  - component: {fileID: 2411538668217387755}
   m_Layer: 0
   m_Name: Projetil
   m_TagString: Untagged
@@ -1144,6 +1145,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94121af8cd575a341957a0a22528395b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2411538668217387755
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284895474696500786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6342301996424967037
 GameObject:
   m_ObjectHideFlags: 0

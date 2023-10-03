@@ -29,10 +29,11 @@ public class Zarabatana : MonoBehaviour
 
     IEnumerator AtrasoParaAtirar()
     {
+        tempoUltimoDisparo = Time.time; // Atualiza o tempo do último disparo imediatamente
+
         yield return new WaitForSeconds(atrasoDisparo);
 
         Atirar();
-        tempoUltimoDisparo = Time.time;
     }
 
     void Atirar()
@@ -47,6 +48,7 @@ public class Zarabatana : MonoBehaviour
         if (Physics.Raycast(ponta.position, direcaoCamera, out localAtingidoRaycast, Mathf.Infinity))
         {
             flecha.posicaoAlvo = localAtingidoRaycast.point;
+            localAtingidoRaycast.collider.gameObject.GetComponent<Inimigos>();
         }
         else
         {
