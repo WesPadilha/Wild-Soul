@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
             Animate.SetTrigger("Attack");
             zarabatana.SetActive(true);
             StartCoroutine(nameof(WaitAttack));
+            StartCoroutine(Attack());
             
         }
         moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
@@ -92,6 +93,14 @@ public class PlayerController : MonoBehaviour
         vida += amount;
         vida = Mathf.Clamp(vida, 0, 100); 
         barra.AlterarVida(vida); 
+    }
+    private IEnumerator Attack()
+    {
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack Layer"), 1);
+        Animate.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(0.9f);
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack Layer"), 0);
     }
     private void ReiniciarJogo()
         {
