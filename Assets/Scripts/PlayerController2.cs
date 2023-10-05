@@ -7,15 +7,10 @@ public class PlayerController2 : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public CharacterController controller;
-
     private Vector3 moveDirection;
     public float gravityScale;
-
-    // Variável para o pivô
     public Transform pivot;
-
     public GameObject playerModel;
-
     public LifeBar barra;
     private float vida = 200;
 
@@ -34,7 +29,6 @@ public class PlayerController2 : MonoBehaviour
     {
         float yStore = moveDirection.y;
 
-        // Movimento com as setas do teclado
         moveDirection = (Vector3.forward * Input.GetAxis("Vertical2")) 
             + (Vector3.right * Input.GetAxis("Horizontal2"));
         moveDirection = moveDirection.normalized * moveSpeed;
@@ -44,7 +38,6 @@ public class PlayerController2 : MonoBehaviour
         {
             moveDirection.y = 0f;
 
-            // Salto com a tecla Enter
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 moveDirection.y = jumpForce;
@@ -56,7 +49,6 @@ public class PlayerController2 : MonoBehaviour
 
         if (Input.GetAxis("Horizontal2") != 0 || Input.GetAxis("Vertical2") != 0)
         {
-            // Rotação do modelo (se necessário)
             float targetRotation = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.eulerAngles.y;
             playerModel.transform.rotation = Quaternion.Euler(0, targetRotation, 0);
         }
@@ -65,6 +57,12 @@ public class PlayerController2 : MonoBehaviour
         {
             ReiniciarJogo();
         }
+    }
+    public void Heal(int amount)
+    {
+        vida += amount;
+        vida = Mathf.Clamp(vida, 0, 200); 
+        barra.AlterarVida(vida); 
     }
 
     private void ReiniciarJogo()

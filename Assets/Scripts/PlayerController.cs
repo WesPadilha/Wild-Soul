@@ -87,6 +87,12 @@ public class PlayerController : MonoBehaviour
         zarabatana.SetActive(false);
         isAttacking = false;
     }
+    public void Heal(int amount)
+    {
+        vida += amount;
+        vida = Mathf.Clamp(vida, 0, 100); 
+        barra.AlterarVida(vida); 
+    }
     private void ReiniciarJogo()
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);

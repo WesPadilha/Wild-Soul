@@ -5143,7 +5143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &134415182
 MeshCollider:
@@ -5468,7 +5468,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!64 &205306027
 MeshCollider:
@@ -7550,7 +7550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &979523633
 CapsuleCollider:
@@ -7883,7 +7883,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1082195450
 MeshCollider:
@@ -8581,7 +8581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d801b78021ec2478470c0d0db7f576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 100
+  dano: 1000
 --- !u!65 &1310336761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9095,7 +9095,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 578de0cdcc035d9459d26380f09ce3ef,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 578de0cdcc035d9459d26380f09ce3ef,
         type: 3}
@@ -11620,7 +11620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d801b78021ec2478470c0d0db7f576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 100
+  dano: 1000
 --- !u!65 &1558057501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11772,7 +11772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d801b78021ec2478470c0d0db7f576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 100
+  dano: 1000
 --- !u!65 &1634078034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12117,7 +12117,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1694199747
 MeshCollider:
@@ -13221,7 +13221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d801b78021ec2478470c0d0db7f576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 100
+  dano: 1000
 --- !u!65 &2052982111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13540,7 +13540,7 @@ PrefabInstance:
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
@@ -13669,7 +13669,7 @@ PrefabInstance:
     - target: {fileID: 5157028918460325321, guid: 5b82432d7c79dfb43bc969ad9c012fd2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5157028918460325321, guid: 5b82432d7c79dfb43bc969ad9c012fd2,
         type: 3}
@@ -13887,6 +13887,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693f443f50be75b4987f9f944bde626f, type: 3}
+--- !u!1001 &7987680991891736869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7068567132767146177, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_Name
+      value: "cesta de frutas com interpola\xE7\xE3o linear(testa os dois pra ver
+        qual fica melhor ou se n muda nada, blz)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 79.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.132366
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.6647797
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589490025447164539, guid: abccbed9eebeb594583a89a18f559fef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abccbed9eebeb594583a89a18f559fef, type: 3}
 --- !u!1001 &8103813265042429534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13902,7 +13972,7 @@ PrefabInstance:
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
