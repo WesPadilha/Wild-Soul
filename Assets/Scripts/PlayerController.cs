@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
         {
             isAttacking = true;
-            Animate.SetTrigger("Attack");
+            Animate.SetTrigger("Attacking");
             zarabatana.SetActive(true);
             StartCoroutine(nameof(WaitAttack));
             StartCoroutine(Attack());
@@ -96,11 +96,11 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator Attack()
     {
-        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack Layer"), 1);
-        Animate.SetTrigger("Attack");
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 1);
+        Animate.SetTrigger("Attacking");
 
         yield return new WaitForSeconds(0.9f);
-        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack Layer"), 0);
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 0);
     }
     private void ReiniciarJogo()
         {
