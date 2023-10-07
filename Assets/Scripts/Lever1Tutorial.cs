@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Lever1Tutorial : MonoBehaviour
+public class Lever : MonoBehaviour
 {
     public GameObject porta;
     private bool playerEstaSegurandoAlavanca = false;

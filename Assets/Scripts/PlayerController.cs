@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
+    private bool isClimbing = false;
+    private Transform ladder;
     public CharacterController controller;
     private Vector3 moveDirection;
     public float gravityScale;
@@ -76,6 +78,26 @@ public class PlayerController : MonoBehaviour
         {
             Animate.SetBool("Walking", false);
         }
+        
+        if (Input.GetKeyDown(KeyCode.E) && isClimbing)
+        {
+            StartClimbing();
+        }
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
+        {
+            if (hit.collider.CompareTag("Escada"))
+            {
+                isClimbing = true;
+                ladder = hit.collider.transform;
+            }
+        }
+        else
+        {
+            isClimbing = false;
+            ladder = null;
+        }
 
         if (vida <= 0)
         {
@@ -102,6 +124,29 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.9f);
         Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 0);
     }
+
+    private void StartClimbing()
+    {
+        controller.enabled = false;
+
+        Vector3 climbPosition = ladder.position + Vector3.up * 1.5f;
+        transform.position = climbPosition;
+
+        transform.rotation = Quaternion.LookRotation(-ladder.forward);
+
+        Animate.SetBool("Subir", true);
+
+        moveDirection.y = 0f;
+    }
+    private void StopClimbing()
+    {
+        controller.enabled = true;
+
+        Animate.SetBool("Subir", false);
+
+        transform.rotation = Quaternion.identity;
+    }
+
     private void ReiniciarJogo()
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
