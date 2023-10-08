@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
-    private bool isClimbing = false;
-    private Transform ladder;
+    private bool isClimbing = false; 
+    public Transform ladder;
     public CharacterController controller;
     private Vector3 moveDirection;
     public float gravityScale;
@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
                 Animate.SetBool("Jump", false);
             }   
         }
+
         if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
         {
             isAttacking = true;
@@ -82,23 +83,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isClimbing)
         {
             StartClimbing();
-        }
-
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 2f))
-        {
-            if (hit.collider.CompareTag("Escada"))
-            {
-                isClimbing = true;
-                ladder = hit.collider.transform;
-            }
-        }
-        else
-        {
             isClimbing = false;
-            ladder = null;
         }
 
+        if (Input.GetKeyDown(KeyCode.E) && isClimbing)
+        {
+            StopClimbing(); 
+            isClimbing = true;
+        }
+
+        
         if (vida <= 0)
         {
             ReiniciarJogo();
@@ -138,13 +132,40 @@ public class PlayerController : MonoBehaviour
 
         moveDirection.y = 0f;
     }
+
     private void StopClimbing()
     {
-        controller.enabled = true;
+        Animate.SetBool("Subir", false); 
+        controller.enabled = true; 
+        isClimbing = false; 
+    }
+    private bool CanStartClimbing()
+    {
+        if (ladder == null)
+        {
+            return false;
+        }
 
-        Animate.SetBool("Subir", false);
+        // Verifique se o jogador está próximo o suficiente da escada
+        float distanceToLadder = Vector3.Distance(transform.position, ladder.position);
+        return distanceToLadder < 2.0f; // Ajuste o valor conforme necessário
+    }
 
-        transform.rotation = Quaternion.identity;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Escada"))
+        {
+            isClimbing = true;
+            ladder = other.transform;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Escada"))
+        {
+            isClimbing = false;
+            ladder = null;
+        }
     }
 
     private void ReiniciarJogo()
