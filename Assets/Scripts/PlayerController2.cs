@@ -6,10 +6,14 @@ public class PlayerController2 : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
+    private bool isClimbing = false;
+    public Transform ladder;
     public CharacterController controller;
     private Vector3 moveDirection;
     public float gravityScale;
+    //public Animator Animate;
     public Transform pivot;
+    public float rotateSpeed;
     public GameObject playerModel;
     public LifeBar barra;
     private float vida = 200;
@@ -26,38 +30,63 @@ public class PlayerController2 : MonoBehaviour
     }
 
     void Update()
+{
+    float yStore = moveDirection.y;
+
+    moveDirection = (Vector3.forward * Input.GetAxis("Vertical2")) 
+        + (Vector3.right * Input.GetAxis("Horizontal2"));
+    moveDirection = moveDirection.normalized * moveSpeed;
+    moveDirection.y = yStore;
+
+    if (controller.isGrounded)
     {
-        float yStore = moveDirection.y;
+        moveDirection.y = 0f;
 
-        moveDirection = (Vector3.forward * Input.GetAxis("Vertical2")) 
-            + (Vector3.right * Input.GetAxis("Horizontal2"));
-        moveDirection = moveDirection.normalized * moveSpeed;
-        moveDirection.y = yStore;
-
-        if (controller.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            moveDirection.y = 0f;
+            moveDirection.y = jumpForce;
+        }
+    }
 
-            if (Input.GetKeyDown(KeyCode.Return))
+    if (isClimbing)
+    {
+        moveDirection = new Vector3(0f, Input.GetAxis("Vertical2") * moveSpeed, 0f);
+        moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale - 15f);
+        controller.Move(moveDirection * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.UpArrow) && ladder != null)
+        {
+            moveDirection = Vector3.up * moveSpeed;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow) && ladder != null)
+        {
+            moveDirection = Vector3.down * moveSpeed;
+        }
+    }
+    else
+        {
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
+            if (controller.enabled)
             {
-                moveDirection.y = jumpForce;
+                controller.Move(moveDirection * Time.deltaTime);
+            }
+
+            if (Input.GetAxis("Horizontal2") != 0 || Input.GetAxis("Vertical2") != 0)
+            {
+                float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.rotation.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(playerModel.transform.eulerAngles.y, targetAngle, ref rotateSpeed, 0.1f);
+                playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                //Animate.SetBool("Walking", true);
             }
         }
 
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
-        controller.Move(moveDirection * Time.deltaTime);
-
-        if (Input.GetAxis("Horizontal2") != 0 || Input.GetAxis("Vertical2") != 0)
-        {
-            float targetRotation = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.eulerAngles.y;
-            playerModel.transform.rotation = Quaternion.Euler(0, targetRotation, 0);
-        }
-
-        if (vida <= 0)
-        {
-            ReiniciarJogo();
-        }
+    if (vida <= 0)
+    {
+        ReiniciarJogo();
     }
+}
+
+
     public void Heal(int amount)
     {
         vida += amount;
@@ -68,5 +97,23 @@ public class PlayerController2 : MonoBehaviour
     private void ReiniciarJogo()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Escada"))
+        {
+            isClimbing = true;
+            ladder = other.transform;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Escada"))
+        {
+            isClimbing = false;
+            ladder = null;
+        }
     }
 }

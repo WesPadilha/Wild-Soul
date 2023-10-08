@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
-    private bool isClimbing = false; 
+    private bool isClimbing = false;
     public Transform ladder;
     public CharacterController controller;
     private Vector3 moveDirection;
@@ -20,12 +19,13 @@ public class PlayerController : MonoBehaviour
     private GameObject zarabatana;
     public LifeBar barra;
     private float vida = 100;
-    
+
     public void TakeDamage(float dano)
     {
         vida -= dano;
         barra.AlterarVida(vida);
     }
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float yStore = moveDirection.y;
-        moveDirection = (Vector3.forward * Input.GetAxis("Vertical")) 
+        moveDirection = (Vector3.forward * Input.GetAxis("Vertical"))
             + (Vector3.right * Input.GetAxis("Horizontal"));
         moveDirection = moveDirection.normalized * moveSpeed;
         moveDirection.y = yStore;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Animate.SetBool("Jump", false);
-            }   
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && !isAttacking)
@@ -63,53 +63,64 @@ public class PlayerController : MonoBehaviour
             zarabatana.SetActive(true);
             StartCoroutine(nameof(WaitAttack));
             StartCoroutine(Attack());
-            
         }
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
-        controller.Move(moveDirection * Time.deltaTime);
 
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        if (isClimbing)
         {
-            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.rotation.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(playerModel.transform.eulerAngles.y, targetAngle, ref rotateSpeed, 0.1f);
-            playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            Animate.SetBool("Walking", true);
+            moveDirection = new Vector3(0f, Input.GetAxis("Vertical") * moveSpeed, 0f);
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale - 15f);
+            controller.Move(moveDirection * Time.deltaTime);
+
+            if (Input.GetKeyDown(KeyCode.W)) 
+            {
+                moveDirection = Vector3.up * moveSpeed;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                moveDirection = Vector3.down * moveSpeed;
+            }
+            Animate.SetBool("Subir", true);
         }
         else
         {
-            Animate.SetBool("Walking", false);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.E) && isClimbing)
-        {
-            StartClimbing();
-            isClimbing = false;
-        }
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
+            if (controller.enabled)
+            {
+                controller.Move(moveDirection * Time.deltaTime);
+            }
 
-        if (Input.GetKeyDown(KeyCode.E) && isClimbing)
-        {
-            StopClimbing(); 
-            isClimbing = true;
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            {
+                float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.rotation.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(playerModel.transform.eulerAngles.y, targetAngle, ref rotateSpeed, 0.1f);
+                playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                Animate.SetBool("Walking", true);
+            }
+            else
+            {
+                Animate.SetBool("Walking", false);
+            }
         }
-
-        
         if (vida <= 0)
         {
             ReiniciarJogo();
         }
     }
+
     IEnumerator WaitAttack()
     {
         yield return new WaitForSeconds(1f);
         zarabatana.SetActive(false);
         isAttacking = false;
     }
+
     public void Heal(int amount)
     {
         vida += amount;
-        vida = Mathf.Clamp(vida, 0, 100); 
-        barra.AlterarVida(vida); 
+        vida = Mathf.Clamp(vida, 0, 100);
+        barra.AlterarVida(vida);
     }
+
     private IEnumerator Attack()
     {
         Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 1);
@@ -118,39 +129,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.9f);
         Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 0);
     }
-
-    private void StartClimbing()
-    {
-        controller.enabled = false;
-
-        Vector3 climbPosition = ladder.position + Vector3.up * 1.5f;
-        transform.position = climbPosition;
-
-        transform.rotation = Quaternion.LookRotation(-ladder.forward);
-
-        Animate.SetBool("Subir", true);
-
-        moveDirection.y = 0f;
-    }
-
-    private void StopClimbing()
-    {
-        Animate.SetBool("Subir", false); 
-        controller.enabled = true; 
-        isClimbing = false; 
-    }
-    private bool CanStartClimbing()
-    {
-        if (ladder == null)
-        {
-            return false;
-        }
-
-        // Verifique se o jogador está próximo o suficiente da escada
-        float distanceToLadder = Vector3.Distance(transform.position, ladder.position);
-        return distanceToLadder < 2.0f; // Ajuste o valor conforme necessário
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Escada"))
@@ -159,6 +137,7 @@ public class PlayerController : MonoBehaviour
             ladder = other.transform;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Escada"))
@@ -169,7 +148,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void ReiniciarJogo()
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        }
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
 }

@@ -8,7 +8,7 @@ public class EscadaTutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            transform.position = new Vector3(transform.position.x, 7f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 8f, transform.position.z);
         }
     }
 }
