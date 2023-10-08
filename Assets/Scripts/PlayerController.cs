@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection = Vector3.down * moveSpeed;
             }
-            Animate.SetBool("Subir", true);
+            //Animate.SetBool("Subir", true);
         }
         else
         {
