@@ -80,6 +80,12 @@ public class PlayerController2 : MonoBehaviour
             }
         }
 
+    if (Input.GetKeyDown(KeyCode.Slash) && isClimbing)
+    {
+        isClimbing = false;
+        ladder = null;
+    }
+
     if (vida <= 0)
     {
         ReiniciarJogo();

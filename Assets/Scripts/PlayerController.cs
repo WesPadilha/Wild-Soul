@@ -101,6 +101,12 @@ public class PlayerController : MonoBehaviour
                 Animate.SetBool("Walking", false);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && isClimbing)
+        {
+            isClimbing = false;
+            ladder = null;
+        }
         if (vida <= 0)
         {
             ReiniciarJogo();
