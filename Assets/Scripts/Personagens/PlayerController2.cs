@@ -15,6 +15,8 @@ public class PlayerController2 : MonoBehaviour
     public Transform pivot;
     public float rotateSpeed;
     public GameObject playerModel;
+    private bool isAttacking = false;
+    private GameObject lanca;
     public LifeBar barra;
     private float vida = 200;
 
@@ -27,95 +29,108 @@ public class PlayerController2 : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        lanca = transform.Find("Lança").gameObject;
+        lanca.SetActive(false);
     }
 
     void Update()
-{
-    float yStore = moveDirection.y;
-
-    moveDirection = (Vector3.forward * Input.GetAxis("Vertical2")) 
-        + (Vector3.right * Input.GetAxis("Horizontal2"));
-    moveDirection = moveDirection.normalized * moveSpeed;
-    moveDirection.y = yStore;
-
-    if (controller.isGrounded)
     {
-        moveDirection.y = 0f;
+        float yStore = moveDirection.y;
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            moveDirection.y = jumpForce;
-            Animate.SetBool("Jump", true);
-        }
-        else
-        {
-            Animate.SetBool("Jump", false);
-        }
-    }
+        moveDirection = (Vector3.forward * Input.GetAxis("Vertical2")) 
+            + (Vector3.right * Input.GetAxis("Horizontal2"));
+        moveDirection = moveDirection.normalized * moveSpeed;
+        moveDirection.y = yStore;
 
-    if (isClimbing)
-    {
-        moveDirection = new Vector3(0f, Input.GetAxis("Vertical2") * moveSpeed, 0f);
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale - 15f);
-        controller.Move(moveDirection * Time.deltaTime);
+        if (controller.isGrounded)
+        {
+            moveDirection.y = 0f;
 
-        if (Input.GetKey(KeyCode.UpArrow) && ladder != null)
-        {
-            moveDirection = Vector3.up * moveSpeed;
-        }
-        else if (Input.GetKey(KeyCode.DownArrow) && ladder != null)
-        {
-            moveDirection = Vector3.down * moveSpeed;
-        }
-        Animate.SetBool("Subir", true);
-    }
-    else
-        {
-            Animate.SetBool("Subir", false);
-            moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
-            if (controller.enabled)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                controller.Move(moveDirection * Time.deltaTime);
-            }
-
-            if (Input.GetAxis("Horizontal2") != 0 || Input.GetAxis("Vertical2") != 0)
-            {
-                float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.rotation.eulerAngles.y;
-                float angle = Mathf.SmoothDampAngle(playerModel.transform.eulerAngles.y, targetAngle, ref rotateSpeed, 0.1f);
-                playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
-                Animate.SetBool("Walking", true);
+                moveDirection.y = jumpForce;
+                Animate.SetBool("Jump", true);
             }
             else
             {
-                Animate.SetBool("Walking", false);
+                Animate.SetBool("Jump", false);
             }
         }
 
-    if (Input.GetKeyDown(KeyCode.Slash) && isClimbing)
-    {
-        isClimbing = false;
-        ladder = null;
+        if (isClimbing)
+        {
+            moveDirection = new Vector3(0f, Input.GetAxis("Vertical2") * moveSpeed, 0f);
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale - 15f);
+            controller.Move(moveDirection * Time.deltaTime);
+
+            if (Input.GetKey(KeyCode.UpArrow) && ladder != null)
+            {
+                moveDirection = Vector3.up * moveSpeed;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow) && ladder != null)
+            {
+                moveDirection = Vector3.down * moveSpeed;
+            }
+            Animate.SetBool("Subir", true);
+        }
+        else
+            {
+                Animate.SetBool("Subir", false);
+                moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
+                if (controller.enabled)
+                {
+                    controller.Move(moveDirection * Time.deltaTime);
+                }
+
+                if (Input.GetAxis("Horizontal2") != 0 || Input.GetAxis("Vertical2") != 0)
+                {
+                    float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + pivot.rotation.eulerAngles.y;
+                    float angle = Mathf.SmoothDampAngle(playerModel.transform.eulerAngles.y, targetAngle, ref rotateSpeed, 0.1f);
+                    playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                    Animate.SetBool("Walking", true);
+                }
+                else
+                {
+                    Animate.SetBool("Walking", false);
+                }
+            }
+
+        if (Input.GetKeyDown(KeyCode.Slash) && isClimbing)
+        {
+            isClimbing = false;
+            ladder = null;
+        }
+            if (vida <= 0)
+            {
+                moveSpeed = 0;
+                rotateSpeed = 0;
+                jumpForce = 0;
+                Animate.SetBool("Morte", true);
+                StartCoroutine(RestartGameAfterDelay(4f));
+            }
+
+        if (Input.GetKey(KeyCode.Keypad1) && !isAttacking)
+        {
+            Animate.SetTrigger("Attacking");    
+            lanca.SetActive(true);
+            StartCoroutine(Attack());
+        }
     }
-
-    if (vida <= 0)
+    private IEnumerator Attack()
     {
-        ReiniciarJogo();
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 1);
+        Animate.SetTrigger("Attacking");
+
+        yield return new WaitForSeconds(0.9f);
+        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 0);
     }
-}
-
-
     public void Heal(int amount)
     {
         vida += amount;
         vida = Mathf.Clamp(vida, 0, 200); 
         barra.AlterarVida(vida); 
     }
-
-    private void ReiniciarJogo()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Escada"))
@@ -124,7 +139,6 @@ public class PlayerController2 : MonoBehaviour
             ladder = other.transform;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Escada"))
@@ -132,5 +146,10 @@ public class PlayerController2 : MonoBehaviour
             isClimbing = false;
             ladder = null;
         }
+    }
+    private IEnumerator RestartGameAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }

@@ -14,7 +14,6 @@ public class Placa : MonoBehaviour
 
     private void Start()
     {
-        // Salvar a posição original dos espinhos
         espintosPosOriginal = Espinhos.transform.position;
     }
 

@@ -108,9 +108,14 @@ public class PlayerController : MonoBehaviour
             isClimbing = false;
             ladder = null;
         }
+
         if (vida <= 0)
         {
-            ReiniciarJogo();
+            moveSpeed = 0;
+            rotateSpeed = 0;
+            jumpForce = 0;
+            Animate.SetBool("Morte", true);
+            StartCoroutine(RestartGameAfterDelay(3f));
         }
     }
 
@@ -144,7 +149,6 @@ public class PlayerController : MonoBehaviour
             ladder = other.transform;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Escada"))
@@ -153,9 +157,9 @@ public class PlayerController : MonoBehaviour
             ladder = null;
         }
     }
-
-    private void ReiniciarJogo()
+    private IEnumerator RestartGameAfterDelay(float delay)
     {
+        yield return new WaitForSeconds(delay);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
