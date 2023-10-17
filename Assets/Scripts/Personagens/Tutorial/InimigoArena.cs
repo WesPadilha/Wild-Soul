@@ -14,14 +14,13 @@ public class InimigoArena : MonoBehaviour
     private PlayerController playerController;
     private bool isTouching = false;
     private float vida = 100;
-    public GameObject porta; // Referência ao GameObject da porta
+    public GameObject porta; 
     private GameObject[] players;
 
     void Start()
     {
         vida = 100;
         controller = GetComponent<CharacterController>();
-        FindPortaInHierarchy(); // Chame o novo método para encontrar o objeto na hierarquia
         players = GameObject.FindGameObjectsWithTag("Player");
         StartCoroutine(DanoInimigo());
     }
@@ -109,20 +108,6 @@ public class InimigoArena : MonoBehaviour
             {
                 porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
             }
-        }
-    }
-
-    private void FindPortaInHierarchy()
-    {
-        Transform portaTransform = transform.Find("Tutorial");
-
-        if (portaTransform != null)
-        {
-            porta = portaTransform.gameObject;
-        }
-        else
-        {
-            Debug.LogError("Porta not found!");
         }
     }
 

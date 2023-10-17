@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
         {
             Animate.SetBool("Subir", false);
             moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale);
+
             if (controller.enabled)
             {
                 controller.Move(moveDirection * Time.deltaTime);
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour
                 playerModel.transform.rotation = Quaternion.Euler(0f, angle, 0f);
                 Animate.SetBool("Walking", true);
             }
+            
             else
             {
                 Animate.SetBool("Walking", false);
