@@ -114,16 +114,7 @@ public class PlayerController2 : MonoBehaviour
         {
             Animate.SetTrigger("Attacking");    
             lanca.SetActive(true);
-            StartCoroutine(Attack());
         }
-    }
-    private IEnumerator Attack()
-    {
-        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 1);
-        Animate.SetTrigger("Attacking");
-
-        yield return new WaitForSeconds(0.9f);
-        Animate.SetLayerWeight(Animate.GetLayerIndex("Attack"), 0);
     }
     public void Heal(int amount)
     {
