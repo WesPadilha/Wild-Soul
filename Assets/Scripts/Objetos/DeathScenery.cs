@@ -14,9 +14,20 @@ public class DeathScenery : MonoBehaviour
             {
                 controle.TakeDamage(dano);
             }
+
             if (controle2 != null)
             {
                 controle2.TakeDamage(dano);
+            }                      
+        }
+
+        if (other.gameObject.CompareTag("Inimigo"))
+        {
+            InimigoArena inimigo = other.gameObject.GetComponent<InimigoArena>();
+            
+            if (inimigo != null)
+            {
+                inimigo.TakeDamage(dano);
             }
         }
     } 

@@ -22,10 +22,15 @@ public class Projetil : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Inimigos inimigo = other.gameObject.GetComponent<Inimigos>();
+        InimigoArena inimigos = other.gameObject.GetComponent<InimigoArena>();
 
         if (inimigo != null)
         {
             inimigo.TakeDamageInimigo(35f);
+        }
+        if (inimigos != null)
+        {
+            inimigos.TakeDamageInimigo(35f);
         }
 
         Destroy(gameObject);

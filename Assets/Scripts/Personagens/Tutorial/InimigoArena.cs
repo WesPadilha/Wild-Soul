@@ -13,9 +13,11 @@ public class InimigoArena : MonoBehaviour
     private PlayerController2 playerController2;
     private PlayerController playerController;
     private bool isTouching = false;
-    private float vida = 100;
+    private float vida = 450;
     public GameObject porta; 
     private GameObject[] players;
+    private float gravity = 9.81f;
+    private Vector3 acceleration = Vector3.zero;
 
     void Start()
     {
@@ -39,9 +41,15 @@ public class InimigoArena : MonoBehaviour
 
         isTouching = false;
 
-        moveDirection = (closestPlayer.transform.position - transform.position).normalized * moveSpeed;
+        Vector3 desiredMoveDirection = (closestPlayer.transform.position - transform.position).normalized;
+        acceleration = desiredMoveDirection * moveSpeed;
 
-        controller.Move(moveDirection * Time.deltaTime);
+        if (!controller.isGrounded)
+        {
+            moveDirection.y -= gravity * Time.deltaTime;
+        }
+
+        controller.Move((moveDirection + acceleration) * Time.deltaTime);
     }
 
     private GameObject GetClosestPlayer()
@@ -105,6 +113,19 @@ public class InimigoArena : MonoBehaviour
         {
             Destroy(this.gameObject);
             if (porta != null)
+            {
+                porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
+            }
+        }
+    }
+    public void TakeDamage(float dano)
+    {
+        vida -= dano;
+        
+        if(vida <= 0)
+        {
+            Destroy(this.gameObject);
+                        if (porta != null)
             {
                 porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
             }

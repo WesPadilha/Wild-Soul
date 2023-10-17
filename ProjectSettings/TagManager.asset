@@ -7,6 +7,8 @@ TagManager:
   - Espinho
   - Player2
   - Escada
+  - DeathScenery
+  - Inimigo
   layers:
   - Default
   - TransparentFX
