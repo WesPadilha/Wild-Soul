@@ -8,20 +8,17 @@ public class PortaController : MonoBehaviour
 
     void Start()
     {
-        // Inicialmente, a porta está fechada
         portaAberta = false;
     }
 
     public void AbrirPorta()
     {
-        // Mude a posição Y da porta para 25f para abri-la
         transform.position = new Vector3(transform.position.x, 25f, transform.position.z);
         portaAberta = true;
     }
 
     public void FecharPorta()
     {
-        // Mude a posição Y da porta para 0f para fechá-la
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
         portaAberta = false;
     }
