@@ -9,6 +9,7 @@ TagManager:
   - Escada
   - DeathScenery
   - Inimigo
+  - Objeto
   layers:
   - Default
   - TransparentFX

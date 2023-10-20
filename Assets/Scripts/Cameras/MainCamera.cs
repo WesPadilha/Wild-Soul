@@ -20,7 +20,7 @@ public class MainCamera : MonoBehaviour
             return;
 
         Vector3 centerPoint = GetCenterPoint();
-        Vector3 newPosition = centerPoint + new Vector3 (0, 19, -11);
+        Vector3 newPosition = centerPoint + new Vector3 (0, 25, -15);
 
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
     }

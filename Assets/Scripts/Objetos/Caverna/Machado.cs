@@ -28,7 +28,7 @@ public class Machado : MonoBehaviour
 
             if (animator != null)
             {
-                animator.SetTrigger("Ataque");
+                animator.SetBool("Ataque",true);
             }
         }
     }
