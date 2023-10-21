@@ -6,14 +6,16 @@ public class AlavancaElevador2 : MonoBehaviour
 {
     public Elevador2 elevador;
     private bool isPlayerInteracting = false;
-    private bool hasInteracted = false;
 
     private void Update()
     {
-        if (isPlayerInteracting && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Slash)) && !hasInteracted)
+        if (isPlayerInteracting && (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Slash)))
         {
             elevador.IniciarMovimentoDoElevador();
-            hasInteracted = true;
+        }
+        else
+        {
+            elevador.PararMovimentoDoElevador();
         }
     }
 
@@ -30,6 +32,7 @@ public class AlavancaElevador2 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInteracting = false;
+            elevador.PararMovimentoDoElevador();
         }
     }
 }

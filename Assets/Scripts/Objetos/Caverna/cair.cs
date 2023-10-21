@@ -4,36 +4,24 @@ using UnityEngine;
 
 public class cair : MonoBehaviour
 {
-    private bool isFalling = false;
-    public float delayTime = 1.5f;
-    public float fallSpeed = 5.0f; // Velocidade de queda
+    private Rigidbody rb;
 
-    private Vector3 initialPosition;
-
-    void Start()
+    private void Start()
     {
-        initialPosition = transform.position;
+        rb = GetComponent<Rigidbody>();
+        // Desativar o Rigidbody no início para que o objeto esteja imóvel
+        rb.isKinematic = true;
+        rb.useGravity = false;
     }
 
-    void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") && !isFalling)
+        // Verifica se o objeto que colidiu é o jogador (você pode definir isso de acordo com as suas necessidades)
+        if (other.gameObject.CompareTag("Player"))
         {
-            Invoke("StartFalling", delayTime);
-        }
-    }
-
-    void StartFalling()
-    {
-        isFalling = true;
-    }
-
-    void Update()
-    {
-        if (isFalling)
-        {
-            // Mova o objeto para baixo ao longo do eixo Y
-            transform.position -= Vector3.up * fallSpeed * Time.deltaTime;
+            // Ativa o Rigidbody para permitir movimento físico
+            rb.isKinematic = false;
+            rb.useGravity = true; // Ativa a gravidade
         }
     }
 }
