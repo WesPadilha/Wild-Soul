@@ -9,7 +9,7 @@ public class Elevador2 : MonoBehaviour
     public float velocidade = 1.0f;
     private bool jogadorEstaSegurandoAlavanca = false;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (jogadorEstaSegurandoAlavanca)
         {
@@ -31,5 +31,15 @@ public class Elevador2 : MonoBehaviour
     {
         float passo = velocidade * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, pontoFinal.position, passo);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.transform.SetParent(transform);
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        other.transform.SetParent(null);
     }
 }

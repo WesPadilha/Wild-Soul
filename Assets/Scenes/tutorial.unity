@@ -123,34 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &470107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3639126867321305810, guid: 7199ad9e49f9abb43a6424d5dbbad7bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1736330362}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &470109
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5161308149654586395, guid: 7199ad9e49f9abb43a6424d5dbbad7bb, type: 3}
---- !u!33 &470112
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470107}
-  m_Mesh: {fileID: 5161308149654586395, guid: e81dee913e09a1a4c9a4541392d9e261, type: 3}
 --- !u!1 &5957799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5135378636977370067, guid: 7199ad9e49f9abb43a6424d5dbbad7bb,
@@ -12800,7 +12772,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.77, y: 1.08, z: 0.79}
+  m_Size: {x: 1.38, y: 1.59, z: 1.29}
   m_Center: {x: -0.00031624362, y: 0.40153807, z: 0.16363342}
 --- !u!114 &1723586671
 MonoBehaviour:
