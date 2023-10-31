@@ -16,7 +16,6 @@ public class PlayerController2 : MonoBehaviour
     public float rotateSpeed;
     public GameObject playerModel;
     private bool isAttacking = false;
-    private GameObject lanca;
     public LifeBar barra;
     private float vida = 200;
 
@@ -29,9 +28,6 @@ public class PlayerController2 : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
-        lanca = transform.Find("Lança").gameObject;
-        lanca.SetActive(false);
     }
 
     void Update()
@@ -112,8 +108,13 @@ public class PlayerController2 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Keypad1) && !isAttacking)
         {
-            Animate.SetTrigger("Attacking");    
-            lanca.SetActive(true);
+            Animate.SetBool("Attacking",true);   
+            isAttacking = true;
+            StartCoroutine(nameof(WaitAttack));       
+        }
+        else
+        {
+            Animate.SetBool("Attacking",false);
         }
     }
     public void Heal(int amount)
@@ -137,6 +138,11 @@ public class PlayerController2 : MonoBehaviour
             isClimbing = false;
             ladder = null;
         }
+    }
+    IEnumerator WaitAttack()
+    {
+        yield return new WaitForSeconds(1f);
+        isAttacking = false;
     }
     private IEnumerator RestartGameAfterDelay(float delay)
     {

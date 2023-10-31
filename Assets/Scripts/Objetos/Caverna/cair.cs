@@ -2,26 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cair : MonoBehaviour
+public class Cair : MonoBehaviour
 {
-    private Rigidbody rb;
+    private bool isFalling = false;
+    private float downSpeed = 0.0f;
 
-    private void Start()
+    // Variável para controlar o atraso antes de começar a cair.
+    private float delayBeforeFalling = 1.0f;
+
+    private void FixedUpdate()
     {
-        rb = GetComponent<Rigidbody>();
-        // Desativar o Rigidbody no início para que o objeto esteja imóvel
-        rb.isKinematic = true;
-        rb.useGravity = false;
+        if (isFalling)
+        {
+            downSpeed += Time.deltaTime / 20.0f;
+            Vector3 newPosition = transform.position - new Vector3(0, downSpeed, 0);
+            transform.position = newPosition;
+        }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider collider)
     {
-        // Verifica se o objeto que colidiu é o jogador (você pode definir isso de acordo com as suas necessidades)
-        if (other.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
-            // Ativa o Rigidbody para permitir movimento físico
-            rb.isKinematic = false;
-            rb.useGravity = true; // Ativa a gravidade
+            StartCoroutine(StartFallingDelay());
+            collider.transform.SetParent(transform);
         }
+    }
+    private void OnTriggerExit(Collider collider)
+    {
+        collider.transform.SetParent(null);
+    }
+
+    IEnumerator StartFallingDelay()
+    {
+        yield return new WaitForSeconds(delayBeforeFalling);
+
+        isFalling = true;
+        Destroy(gameObject, 10.0f);
     }
 }

@@ -8,6 +8,7 @@ public class Inimigos : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float dano = 20f;
+    public float rotateSpeed = 5f; // Rotation speed
     private CharacterController controller;
     private Vector3 moveDirection;
     private PlayerController2 playerController2;
@@ -15,11 +16,16 @@ public class Inimigos : MonoBehaviour
     private bool isTouching = false;
     private float vida = 100;
 
+    private Animator anim;
+
     void Start()
     {
         vida = 100;
         controller = GetComponent<CharacterController>();
         StartCoroutine(nameof(DanoInimigo));
+
+        // Get the Animator component attached to the enemy
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -55,9 +61,29 @@ public class Inimigos : MonoBehaviour
 
         isTouching = false;
 
-        moveDirection = (closestPlayer.transform.position - transform.position).normalized * moveSpeed;
+        // Calculate the direction to face the player
+        Vector3 targetDirection = (closestPlayer.transform.position - transform.position).normalized;
+
+        // Smoothly rotate towards the player
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
+        moveDirection = targetDirection * moveSpeed;
 
         controller.Move(moveDirection * Time.deltaTime);
+
+        // Play "Walking" animation when moving
+        if (anim != null)
+        {
+            if (moveDirection.magnitude > 0)
+            {
+                anim.SetBool("Walking", true);
+            }
+            else
+            {
+                anim.SetBool("Walking", false);
+            }
+        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -75,6 +101,12 @@ public class Inimigos : MonoBehaviour
 
         isTouching = true;
         DanoInimigo();
+
+        // Play "Attack" animation when touching the player
+        if (anim != null)
+        {
+            anim.SetTrigger("Attack");
+        }
     }
 
     public IEnumerator DanoInimigo()
@@ -104,3 +136,4 @@ public class Inimigos : MonoBehaviour
         }
     }
 }
+    

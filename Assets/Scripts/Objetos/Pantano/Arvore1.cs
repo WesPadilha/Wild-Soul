@@ -7,6 +7,7 @@ public class Arvore1 : MonoBehaviour
     private Animator animator;
     public List<GameObject> objetosAMover; 
     private Vector3 novaPosicao;
+    private bool playerInCollider = false;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class Arvore1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Slash))
+        if (playerInCollider && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Slash)))
         {
             animator.SetTrigger("Animacao");
             StartCoroutine(ExecutarAcaoAposEspera(1f));
@@ -27,10 +28,25 @@ public class Arvore1 : MonoBehaviour
     {
         yield return new WaitForSeconds(tempoDeEspera);
 
-        // Mova cada objeto na lista para a nova posição
         foreach (GameObject objeto in objetosAMover)
         {
             objeto.transform.position = objeto.transform.position + novaPosicao;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInCollider = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInCollider = false;
         }
     }
 }

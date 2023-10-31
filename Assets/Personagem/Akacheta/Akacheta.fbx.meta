@@ -1,47 +1,41 @@
 fileFormatVersion: 2
-guid: feec6e685c471a44fa22b02347c757c0
+guid: 9ec16b795f527ed4aae9636a0a53607a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: -7940145242556206379
-    second: Armature.004|Armature.001|mixamo.com|Layer0
+      74: -6039235621738319110
+    second: Armature|Armature.002|mixamo.com|Layer0
   - first:
-      74: 5752237149229653715
-    second: Armature.004|Armature.002|mixamo.com|Layer0
+      74: -5972747985269555127
+    second: Armature|Armature.002|mixamo.com|Layer0.001
   - first:
-      74: 3725142454577112472
-    second: Armature.004|Armature.003|mixamo.com|Layer0
+      74: 4884613217518788446
+    second: Armature|Armature.003|mixamo.com|Layer0
   - first:
-      74: 3900816644529484784
-    second: idel
+      74: 1450608747119229839
+    second: Armature|Armature.004|mixamo.com|Layer0
   - first:
-      74: -87165324661184513
-    second: Armature.004|Armature.004|Armature|Armature|mixamo.com|Layer0
+      74: -5116954672600923695
+    second: Armature|Armature.005|Armature|ArmatureAction
   - first:
-      74: -4143954376843542394
-    second: Armature.004|Armature|mixamo.com|Layer0
+      74: -7349127427897763635
+    second: Armature|Armature.005|Armature|ArmatureAction.001
   - first:
-      74: 9029891111446450063
-    second: Armature.004|Armature|mixamo.com|Layer0.001
+      74: 3045352900572016357
+    second: Armature|Armature.005|Armature|Armature|mixamo.com|Layer0.001
   - first:
-      74: 7107750888421185600
-    second: Armature.005|Armature.005|Armature.001|Armature.001Action
+      74: 6978113555357465058
+    second: Armature|Armature.006|mixamo.com|Layer0
   - first:
-      74: -1185426625977693399
-    second: Armature.005|Armature.005|Armature.001|Armature|mixamo.com|Layer0
+      74: 1272477167644287873
+    second: Jump
   - first:
-      74: 6200578666267062213
-    second: run
+      74: -5989579420725052391
+    second: Armature|Armature|Armature|Armature|Armature|Armature|mixamo.com|Layer0
   - first:
-      74: -2993534804863918692
-    second: jump
-  - first:
-      74: -6239216113759591374
-    second: attack
-  - first:
-      74: -6758483313513240000
-    second: death
+      74: 1695669026566334936
+    second: Armature|Armature|Armature|Armature|Armature|ArmatureAction (1)
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -72,127 +66,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: idel
-      takeName: Armature.004|Armature.004|Armature|ArmatureAction
+      name: Jump
+      takeName: Armature|Armature|Armature|Armature|Armature|ArmatureAction
       internalID: 0
-      firstFrame: 0
-      lastFrame: 344
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: run
-      takeName: Armature.004|Armature.004|Armature|ArmatureAction
-      internalID: 0
-      firstFrame: 345
-      lastFrame: 369
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: jump
-      takeName: Armature.004|Armature.004|Armature|ArmatureAction
-      internalID: 0
-      firstFrame: 384
-      lastFrame: 410
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: attack
-      takeName: Armature.004|Armature.004|Armature|ArmatureAction
-      internalID: 0
-      firstFrame: 428
-      lastFrame: 467
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: death
-      takeName: Armature.004|Armature.004|Armature|ArmatureAction
-      internalID: 0
-      firstFrame: 468
-      lastFrame: 570
+      firstFrame: 582
+      lastFrame: 605
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -281,7 +159,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
