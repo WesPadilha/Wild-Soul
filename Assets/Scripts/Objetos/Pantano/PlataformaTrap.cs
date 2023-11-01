@@ -12,7 +12,6 @@ public class PlataformaTrap : MonoBehaviour
 
     void Start()
     {
-        // Obtenha os componentes Animator dos GameObjects em Plataforma1 e Plataforma2
         animator1 = Plataforma1.GetComponent<Animator>();
         animator2 = Plataforma2.GetComponent<Animator>();
     }
@@ -23,7 +22,6 @@ public class PlataformaTrap : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Slash))
             {
-                // Ative o booleano nas animações dos GameObjects
                 animator1.SetTrigger("1");
                 animator2.SetTrigger("2");
             }
