@@ -1,18 +1,20 @@
 fileFormatVersion: 2
-guid: 6505157239c41cb4eaa360c57e3bb3f0
+guid: 216dd0dc0dba9174fa4c5f88a9d667be
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: -8860777762589492442
-    second: 1
+      74: 4781951162920444690
+    second: Armature|ArmatureAction
   - first:
-      74: -7414347442814847209
-    second: 2
+      74: -1422011007694221501
+    second: Armature|ArmatureAction.001
   - first:
-      74: -3809910582375227847
-    second: d11 armadura plataforma puzzle3 6 lado esquerdo|armadura plataforma puzzle3
-      1Action.007
+      74: 6165553400957861818
+    second: Armature|Armature|mixamo.com|Layer0.001
+  - first:
+      74: -1646184791463580164
+    second: escada
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -43,73 +45,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 1
-      takeName: d11 armadura plataforma puzzle3 6 lado esquerdo|armadura plataforma
-        puzzle3 1Action.007
+      name: escada
+      takeName: Armature|ArmatureAction.001
       internalID: 0
       firstFrame: 0
-      lastFrame: 15
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: 2
-      takeName: d11 armadura plataforma puzzle3 6 lado esquerdo|armadura plataforma
-        puzzle3 1Action.007
-      internalID: 0
-      firstFrame: 15
-      lastFrame: 25
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: d11 armadura plataforma puzzle3 6 lado esquerdo|armadura plataforma puzzle3
-        1Action.007
-      takeName: d11 armadura plataforma puzzle3 6 lado esquerdo|armadura plataforma
-        puzzle3 1Action.007
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 25
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

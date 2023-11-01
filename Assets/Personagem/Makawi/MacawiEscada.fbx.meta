@@ -1,14 +1,11 @@
 fileFormatVersion: 2
-guid: 0fa53c77e61b4224b878a508d2946c03
+guid: 867a52cf980cd01419f35ed330a86c89
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
       74: -4791504522942941401
-    second: Armature|Armature|mixamo.com|Layer0
+    second: escada
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -39,18 +36,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|ArmatureAction
-      takeName: Armature|ArmatureAction
+      name: escada
+      takeName: Armature|Armature|mixamo.com|Layer0
       internalID: 0
-      firstFrame: 0
-      lastFrame: 50
+      firstFrame: 100
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

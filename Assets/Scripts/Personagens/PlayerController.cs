@@ -71,11 +71,11 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = moveDirection.y + (Physics.gravity.y * Time.deltaTime * gravityScale - 15f);
             controller.Move(moveDirection * Time.deltaTime);
 
-            if (Input.GetKeyDown(KeyCode.W)) 
+            if (Input.GetKeyDown(KeyCode.W) && ladder != null) 
             {
                 moveDirection = Vector3.up * moveSpeed;
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S) && ladder != null)
             {
                 moveDirection = Vector3.down * moveSpeed;
             }

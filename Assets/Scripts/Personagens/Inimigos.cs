@@ -8,7 +8,7 @@ public class Inimigos : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float dano = 20f;
-    public float rotateSpeed = 5f; // Rotation speed
+    public float rotateSpeed = 5f; 
     private CharacterController controller;
     private Vector3 moveDirection;
     private PlayerController2 playerController2;
@@ -23,8 +23,6 @@ public class Inimigos : MonoBehaviour
         vida = 100;
         controller = GetComponent<CharacterController>();
         StartCoroutine(nameof(DanoInimigo));
-
-        // Get the Animator component attached to the enemy
         anim = GetComponent<Animator>();
     }
 
@@ -60,11 +58,7 @@ public class Inimigos : MonoBehaviour
         playerController = closestPlayer.GetComponent<PlayerController>();
 
         isTouching = false;
-
-        // Calculate the direction to face the player
         Vector3 targetDirection = (closestPlayer.transform.position - transform.position).normalized;
-
-        // Smoothly rotate towards the player
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
 
@@ -72,7 +66,6 @@ public class Inimigos : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime);
 
-        // Play "Walking" animation when moving
         if (anim != null)
         {
             if (moveDirection.magnitude > 0)
@@ -102,10 +95,13 @@ public class Inimigos : MonoBehaviour
         isTouching = true;
         DanoInimigo();
 
-        // Play "Attack" animation when touching the player
         if (anim != null)
         {
-            anim.SetTrigger("Attack");
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
         }
     }
 
