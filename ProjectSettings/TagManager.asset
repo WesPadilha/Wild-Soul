@@ -10,6 +10,7 @@ TagManager:
   - DeathScenery
   - Inimigo
   - Objeto
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

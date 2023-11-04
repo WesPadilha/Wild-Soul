@@ -2,29 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
 
 public class InimigoArena : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float dano = 20f;
+    public float rotateSpeed = 5f;
     private CharacterController controller;
     private Vector3 moveDirection;
     private PlayerController2 playerController2;
     private PlayerController playerController;
     private bool isTouching = false;
-    private float vida = 450;
-    public GameObject porta; 
+    private float vida = 400;
+    public GameObject porta;
     private GameObject[] players;
     private float gravity = 9.81f;
     private Vector3 acceleration = Vector3.zero;
 
+    private Animator anim;
+
     void Start()
     {
-        vida = 100;
+        vida = 400;
         controller = GetComponent<CharacterController>();
         players = GameObject.FindGameObjectsWithTag("Player");
         StartCoroutine(DanoInimigo());
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -50,6 +53,23 @@ public class InimigoArena : MonoBehaviour
         }
 
         controller.Move((moveDirection + acceleration) * Time.deltaTime);
+
+        // Rotate the enemy towards the target player
+        Quaternion targetRotation = Quaternion.LookRotation(desiredMoveDirection);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
+        // Add animation logic here
+        if (anim != null)
+        {
+            if (moveDirection.magnitude > 0)
+            {
+                anim.SetBool("Walking", true);
+            }
+            else
+            {
+                anim.SetBool("Walking", false);
+            }
+        }
     }
 
     private GameObject GetClosestPlayer()
@@ -86,6 +106,12 @@ public class InimigoArena : MonoBehaviour
 
         isTouching = true;
         DanoInimigo();
+
+        // Add animation logic here
+        if (anim != null)
+        {
+            anim.SetBool("Attack", true);
+        }
     }
 
     public IEnumerator DanoInimigo()
@@ -118,18 +144,18 @@ public class InimigoArena : MonoBehaviour
             }
         }
     }
+
     public void TakeDamage(float dano)
     {
         vida -= dano;
-        
-        if(vida <= 0)
+
+        if (vida <= 0)
         {
             Destroy(this.gameObject);
-                        if (porta != null)
+            if (porta != null)
             {
                 porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
             }
         }
     }
-
 }

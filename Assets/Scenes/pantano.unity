@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b8f674de6712a074da789d827a88beba, type: 2}
 --- !u!1 &16786044
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 16786045}
   - component: {fileID: 16786046}
+  - component: {fileID: 16786048}
+  - component: {fileID: 16786047}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -168,6 +170,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &16786047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16786044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &16786048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16786044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1001 &27374796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,7 +205,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
@@ -471,6 +498,8 @@ GameObject:
   m_Component:
   - component: {fileID: 56148836}
   - component: {fileID: 56148837}
+  - component: {fileID: 56148839}
+  - component: {fileID: 56148838}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -506,6 +535,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &56148838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56148835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &56148839
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56148835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1 &64019664
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +660,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
@@ -1033,12 +1087,12 @@ PrefabInstance:
     - target: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 90.05998
+      value: 89.359985
       objectReference: {fileID: 0}
     - target: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
         type: 3}
@@ -1048,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -213.09778
+      value: -194.4978
       objectReference: {fileID: 0}
     - target: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
         type: 3}
@@ -1087,12 +1141,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59622c74f391a2f4ca7dcc334cdca1da, type: 3}
---- !u!4 &158588498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
-    type: 3}
-  m_PrefabInstance: {fileID: 158588497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &185421344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1282,7 +1330,7 @@ GameObject:
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &255376473
@@ -1569,6 +1617,8 @@ GameObject:
   m_Component:
   - component: {fileID: 400733859}
   - component: {fileID: 400733860}
+  - component: {fileID: 400733862}
+  - component: {fileID: 400733861}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1604,6 +1654,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &400733861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400733858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &400733862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400733858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1001 &409383280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,12 +1689,12 @@ PrefabInstance:
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.999985
+      value: 83.29999
       objectReference: {fileID: 0}
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
@@ -1629,7 +1704,7 @@ PrefabInstance:
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -224.37878
+      value: -205.77881
       objectReference: {fileID: 0}
     - target: {fileID: 2819283980641539478, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
@@ -1675,12 +1750,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playersToFollow.Array.data[0]
       value: 
-      objectReference: {fileID: 1994567254}
+      objectReference: {fileID: 6054156901966929485}
     - target: {fileID: 2819283980641539562, guid: e923fb1368b673f4183a22e9f51f9cad,
         type: 3}
       propertyPath: playersToFollow.Array.data[1]
       value: 
-      objectReference: {fileID: 158588498}
+      objectReference: {fileID: 3190466635097397763}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e923fb1368b673f4183a22e9f51f9cad, type: 3}
 --- !u!1 &409383281 stripped
@@ -1730,6 +1805,8 @@ GameObject:
   m_Component:
   - component: {fileID: 455165036}
   - component: {fileID: 455165037}
+  - component: {fileID: 455165039}
+  - component: {fileID: 455165038}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1765,6 +1842,100 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &455165038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455165035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &455165039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455165035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
+--- !u!1001 &536668866
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.485523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 144.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.033683617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99943256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -176.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282672860668479715, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_Name
+      value: Imigoserrinha
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e13e21916bd8964ba9d0f6156487452, type: 3}
 --- !u!1 &555258594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1946,8 @@ GameObject:
   m_Component:
   - component: {fileID: 555258595}
   - component: {fileID: 555258596}
+  - component: {fileID: 555258598}
+  - component: {fileID: 555258597}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1810,101 +1983,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
---- !u!1001 &577414279
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 71.78
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.49
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-        type: 3}
-      propertyPath: m_Name
-      value: e
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb, type: 3}
---- !u!1 &577414280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86cfec94dd6d0ee4391cf5f041d9ddcb,
-    type: 3}
-  m_PrefabInstance: {fileID: 577414279}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &577414283
-Animator:
-  serializedVersion: 4
+--- !u!114 &555258597
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577414280}
+  m_GameObject: {fileID: 555258594}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1f81b74909edf2145ab41b998abe7612, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &555258598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555258594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1001 &635433120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2046,6 +2149,8 @@ GameObject:
   m_Component:
   - component: {fileID: 654860986}
   - component: {fileID: 654860987}
+  - component: {fileID: 654860989}
+  - component: {fileID: 654860988}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2081,6 +2186,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &654860988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654860985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &654860989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654860985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!65 &666671675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2144,7 +2274,7 @@ PrefabInstance:
     - target: {fileID: 5069065653181203285, guid: 343acec9394129b41afaa45ca37de6b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5069065653181203285, guid: 343acec9394129b41afaa45ca37de6b0,
         type: 3}
@@ -2253,51 +2383,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343acec9394129b41afaa45ca37de6b0, type: 3}
---- !u!1 &669641654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 669641656}
-  - component: {fileID: 669641655}
-  m_Layer: 0
-  m_Name: arvore
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &669641655
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669641654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.5, y: 8.5, z: 126.37}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &669641656
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669641654}
-  m_LocalRotation: {x: -0.017522287, y: 0, z: 0, w: 0.9998465}
-  m_LocalPosition: {x: 75.9, y: -8.1, z: 221}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: -2.008, y: 0, z: 0}
 --- !u!1 &672013742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2399,7 @@ GameObject:
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &672013743
@@ -2459,7 +2544,7 @@ GameObject:
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &738563795
@@ -2655,21 +2740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91dff882be3f11f49a08cd4a12f38b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetosAMover:
-  - {fileID: 669641654}
---- !u!65 &831124032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831124024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.64, y: 22.53, z: 15.06}
-  m_Center: {x: -1.45, y: 10.32, z: 296}
 --- !u!64 &854261907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2698,6 +2768,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7566873891818633245, guid: 42f3334000e688c4782310359424731d, type: 3}
+--- !u!1001 &873987595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.927713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 553.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.033683617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99943256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -176.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282672860668479715, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_Name
+      value: Imigoserrinha (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e13e21916bd8964ba9d0f6156487452, type: 3}
 --- !u!1 &880047014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,6 +2896,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4147074528740485495, guid: 42f3334000e688c4782310359424731d, type: 3}
+--- !u!1 &901145063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901145064}
+  - component: {fileID: 901145065}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901145064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901145063}
+  m_LocalRotation: {x: -0.18866688, y: 0, z: 0, w: 0.9820412}
+  m_LocalPosition: {x: -1, y: 60.3, z: 275.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1007313825}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -21.75, y: 0, z: 0}
+--- !u!65 &901145065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901145063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.44, y: 163.4, z: 10.17}
+  m_Center: {x: 0, y: 9.54, z: 0}
 --- !u!1001 &907398789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,7 +3412,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &998737393
 MonoBehaviour:
@@ -3293,7 +3477,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1007313824
 PrefabInstance:
@@ -3357,13 +3541,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7308578748390397070, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 80.30358
+      objectReference: {fileID: 0}
+    - target: {fileID: -7308578748390397070, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -64.065155
+      objectReference: {fileID: 0}
+    - target: {fileID: -7308578748390397070, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -64.395454
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8093538b40a80b45bc144e0c60119de,
         type: 3}
       propertyPath: m_Name
       value: d4 armadura arvorepuzzle1
       objectReference: {fileID: 0}
+    - target: {fileID: 5597990742667238190, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -74.62776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597990742667238190, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597990742667238190, guid: f8093538b40a80b45bc144e0c60119de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8093538b40a80b45bc144e0c60119de, type: 3}
+--- !u!4 &1007313825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f8093538b40a80b45bc144e0c60119de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007313824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1024994099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3540,6 +3760,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4366350250644630105, guid: 42f3334000e688c4782310359424731d, type: 3}
+--- !u!1001 &1092011194
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.927713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.033683617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99943256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -176.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756929678123307609, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282672860668479715, guid: 4e13e21916bd8964ba9d0f6156487452,
+        type: 3}
+      propertyPath: m_Name
+      value: Imigoserrinha (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e13e21916bd8964ba9d0f6156487452, type: 3}
 --- !u!1 &1101131103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3839,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1101131104}
   - component: {fileID: 1101131105}
+  - component: {fileID: 1101131107}
+  - component: {fileID: 1101131106}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3585,6 +3876,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1101131106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101131103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1101131107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101131103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1001 &1134323041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3710,7 +4026,7 @@ PrefabInstance:
     - target: {fileID: 5123655213668741640, guid: f887dda80166ff84b85c64fdef9cbb64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5123655213668741640, guid: f887dda80166ff84b85c64fdef9cbb64,
         type: 3}
@@ -3802,6 +4118,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5123655213668741641, guid: f887dda80166ff84b85c64fdef9cbb64,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5123655213668741645, guid: f887dda80166ff84b85c64fdef9cbb64,
         type: 3}
       propertyPath: m_Name
@@ -3819,6 +4140,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1175798839}
   - component: {fileID: 1175798840}
+  - component: {fileID: 1175798842}
+  - component: {fileID: 1175798841}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3854,6 +4177,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1175798841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175798838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1175798842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175798838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!114 &1195337382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3904,7 +4252,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
         type: 3}
@@ -4252,6 +4600,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1382296807}
   - component: {fileID: 1382296808}
+  - component: {fileID: 1382296810}
+  - component: {fileID: 1382296809}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4287,6 +4637,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1382296809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382296806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1382296810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382296806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1 &1408007085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,16 +4951,16 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1994567254}
+      objectReference: {fileID: 6054156901966929485}
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.09999
+      value: 82.399994
       objectReference: {fileID: 0}
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
@@ -4595,7 +4970,7 @@ PrefabInstance:
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -210.61865
+      value: -192.01868
       objectReference: {fileID: 0}
     - target: {fileID: 8103813266422739030, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
@@ -4641,12 +5016,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playersToFollow.Array.data[0]
       value: 
-      objectReference: {fileID: 1994567254}
+      objectReference: {fileID: 6054156901966929485}
     - target: {fileID: 8103813266422739031, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: playersToFollow.Array.data[1]
       value: 
-      objectReference: {fileID: 158588498}
+      objectReference: {fileID: 3190466635097397763}
     - target: {fileID: 8103813266422739033, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_Name
@@ -4656,7 +5031,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 158588498}
+      objectReference: {fileID: 3190466635097397763}
     - target: {fileID: 8103813266589182535, guid: 1799b98fe95181c47b7f21e96ff3eef3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4856,7 +5231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1660592054
 BoxCollider:
@@ -4871,6 +5246,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.83, y: 13.29, z: 1}
   m_Center: {x: 0, y: 0.97, z: -0.39}
+--- !u!1001 &1661292829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1540.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1322.3204
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.72979075
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.68367064
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -273.738
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_Name
+      value: D
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc1cb8fca653271459936a54f1b259cf, type: 3}
+--- !u!1 &1661292830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc1cb8fca653271459936a54f1b259cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1661292829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1661292831
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661292830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a30ddbe942e9d7f488075b79c09a17f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &1701956430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4894,6 +5364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1710852561}
   - component: {fileID: 1710852562}
+  - component: {fileID: 1710852564}
+  - component: {fileID: 1710852563}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4929,6 +5401,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1710852563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710852560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1710852564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710852560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1 &1731486251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4939,6 +5436,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1731486252}
   - component: {fileID: 1731486253}
+  - component: {fileID: 1731486255}
+  - component: {fileID: 1731486254}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4974,6 +5473,126 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1731486254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731486251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1731486255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731486251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
+--- !u!1001 &1752656877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1392.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1072.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.82239556
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.56891614
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -69.349
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc1cb8fca653271459936a54f1b259cf,
+        type: 3}
+      propertyPath: m_Name
+      value: E
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc1cb8fca653271459936a54f1b259cf, type: 3}
+--- !u!1 &1752656878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc1cb8fca653271459936a54f1b259cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1752656877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1752656879
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752656878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f81b74909edf2145ab41b998abe7612, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1757480020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,6 +5876,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1834541727}
   - component: {fileID: 1834541728}
+  - component: {fileID: 1834541730}
+  - component: {fileID: 1834541729}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -5292,6 +5913,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &1834541729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834541726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1834541730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834541726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!1 &1835459522 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c1402aab830ac245b1b60bd9c68a0c0,
@@ -5480,103 +6126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Porta: {fileID: 1427615778}
-  Objeto1: {fileID: 577414280}
-  Objeto2: {fileID: 1961524436}
---- !u!1001 &1961524435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 70.62
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.17
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.36
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 917d63233ea1142408269f4e34b326ee,
-        type: 3}
-      propertyPath: m_Name
-      value: d
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 917d63233ea1142408269f4e34b326ee, type: 3}
---- !u!1 &1961524436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 917d63233ea1142408269f4e34b326ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 1961524435}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1961524439
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961524436}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a30ddbe942e9d7f488075b79c09a17f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  Objeto1: {fileID: 1752656878}
+  Objeto2: {fileID: 1661292830}
 --- !u!1001 &1994567253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5597,12 +6148,12 @@ PrefabInstance:
     - target: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78.7
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
         type: 3}
@@ -5612,7 +6163,7 @@ PrefabInstance:
     - target: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -213.6
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
         type: 3}
@@ -5656,12 +6207,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8f8854c22d069b4286569bdba16b69f, type: 3}
---- !u!4 &1994567254 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1994567253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!64 &2008601901
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5731,6 +6276,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2124394474}
   - component: {fileID: 2124394475}
+  - component: {fileID: 2124394477}
+  - component: {fileID: 2124394476}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -5766,6 +6313,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 9.46, z: 11.26}
   m_Center: {x: 2.13, y: 0, z: 0}
+--- !u!114 &2124394476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124394473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482bfa92e74ef5344b94b4218b4a4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2124394477
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124394473}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.77, y: 9.46, z: 11.26}
+  m_Center: {x: 3.63, y: 0, z: 0}
 --- !u!114 &2129952263 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5069065652825649903, guid: 343acec9394129b41afaa45ca37de6b0,
@@ -5962,7 +6534,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &95956600948800961
@@ -5979,7 +6551,7 @@ GameObject:
   m_Name: d12 armadura troncodesafio 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &97726362424994246
@@ -6083,7 +6655,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 2 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &234456369271286937
@@ -6099,7 +6671,7 @@ GameObject:
   m_Name: "d9 armadura vit\xF3rio r\xE9gia desafio 7 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &239442010818009097
@@ -6157,8 +6729,8 @@ GameObject:
   m_Name: d8 base da alavancapuzzl2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &307276542538360248
 GameObject:
@@ -6173,7 +6745,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &326078317649986418
@@ -6326,7 +6898,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &374758908578254948
@@ -6359,8 +6931,8 @@ GameObject:
   m_Name: d11 base da alavanca puzzle 3 para a primeira plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &394912613771139701
 Transform:
@@ -6422,7 +6994,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &430812628567656085
@@ -6508,7 +7080,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &503251748572513259
@@ -6540,7 +7112,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &527658475064654817
@@ -6556,7 +7128,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &543450652538437960
@@ -6698,7 +7270,7 @@ Transform:
   - {fileID: 2703965946577071834}
   - {fileID: 3045513068946281681}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &545601268717431307
 MeshFilter:
@@ -6721,7 +7293,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &566830450449139916
@@ -6752,7 +7324,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &581147108184443348
@@ -6946,7 +7518,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 3 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &682196563282955324
@@ -6963,7 +7535,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &694093166100855615
@@ -7053,7 +7625,7 @@ GameObject:
   m_Name: d7 plataforma desafio 6 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &745967818357117732
@@ -7072,8 +7644,8 @@ GameObject:
   m_Name: "d2 vit\xF3ria r\xE9gia desafio de plataforma n\xFAmero 1.2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &790986480596972890
 Transform:
@@ -7122,8 +7694,8 @@ GameObject:
   m_Name: junco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &866996274943012754
 MeshRenderer:
@@ -7205,7 +7777,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &940373330634918645
@@ -7221,7 +7793,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &952408852791039624
@@ -7254,8 +7826,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 6 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &988698556961866293
 Transform:
@@ -7285,7 +7857,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1015978069418152547
@@ -7302,7 +7874,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1025293262504864086
@@ -7335,7 +7907,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 6 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &1037265171889583359
@@ -7474,7 +8046,7 @@ GameObject:
   m_Name: "d9 vit\xF3ria r\xE9gia desafio de plataforma 7 4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &1199128345939532680
@@ -7500,8 +8072,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 2 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1204566684753685492
 GameObject:
@@ -7519,8 +8091,8 @@ GameObject:
   m_Name: "d6 t\xE1buasponte4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1211039918232952775
 GameObject:
@@ -7538,8 +8110,8 @@ GameObject:
   m_Name: d3 plataforma 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1212758105984806104
 MeshRenderer:
@@ -7596,7 +8168,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &1226377326140501021
@@ -7621,7 +8193,7 @@ GameObject:
   m_Name: "d4 placa de press\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1243401620933149301
@@ -7637,7 +8209,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1246590842349904444
@@ -7654,7 +8226,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1250607972703701727
@@ -7671,7 +8243,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 6 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1254684680885717802
@@ -7688,7 +8260,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &1278114061831774224
@@ -7820,8 +8392,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 2 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1352941034952150435
 Transform:
@@ -7878,8 +8450,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1408934740513316836
 Transform:
@@ -7910,7 +8482,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1461436216024041918
@@ -7929,8 +8501,8 @@ GameObject:
   m_Name: "d6 t\xE1buasponte2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1483168806064422793
 GameObject:
@@ -7945,7 +8517,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1486977598016834876
@@ -7994,7 +8566,7 @@ GameObject:
   m_Name: "d9 vit\xF3ria r\xE9gia desafio de plataforma 7 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &1532717215742390006
@@ -8112,8 +8684,8 @@ GameObject:
   m_Name: "d6 t\xE1buasponte3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1594407897654206633
 Transform:
@@ -8220,7 +8792,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &1705909857701579510
@@ -8321,7 +8893,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1720646274882569148
@@ -8340,7 +8912,7 @@ GameObject:
   m_Name: "d9 vit\xF3ria r\xE9gia desafio de plataforma 7 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1759838166558457253
@@ -8429,7 +9001,7 @@ GameObject:
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1822537490802423802
@@ -8445,7 +9017,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1830669914612108541
@@ -8463,8 +9035,8 @@ GameObject:
   m_Name: "\xE1rvore grande cenario"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1832557627237462165
 GameObject:
@@ -8481,8 +9053,8 @@ GameObject:
   m_Name: d8 base da alavancapuzzl2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1840193550228784136
 Transform:
@@ -8512,7 +9084,7 @@ GameObject:
   m_Name: "d9 armadura vit\xF3rio r\xE9gia desafio 7 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1894084550739058474
@@ -8528,7 +9100,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1909092736187460876
@@ -8615,7 +9187,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2005441972475102952
@@ -8631,7 +9203,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &2008221060955009651
@@ -8745,7 +9317,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 1 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2118112824584556273
@@ -8762,7 +9334,7 @@ GameObject:
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &2146197411944394092
@@ -8905,7 +9477,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2191619011041770537
@@ -8954,8 +9526,8 @@ GameObject:
   m_Name: "vit\xF3ria r\xE9gia cenario"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &2257190990526510741
 GameObject:
@@ -8970,7 +9542,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &2273496725173432178
@@ -8994,7 +9566,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2287868666414147313
@@ -9027,7 +9599,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 5 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2322058806117463190
@@ -9059,7 +9631,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2353867569141506495
@@ -9075,7 +9647,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2388549018154936220
@@ -9107,7 +9679,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 4 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2452502320246825342
@@ -9205,8 +9777,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 1 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2556474789003719648
 Transform:
@@ -9251,7 +9823,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2592695660330661372
@@ -9373,7 +9945,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 5 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2703965946577071834
@@ -9405,7 +9977,7 @@ GameObject:
   m_Name: d7 plataforma desafio 6 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &2755608937959413160
@@ -9432,7 +10004,7 @@ GameObject:
   m_Name: d7 armadura plataforma desafio 6 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2797083453970236057
@@ -9448,7 +10020,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2805127993989417705
@@ -9482,8 +10054,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &2817895275272158344
 MeshCollider:
@@ -9514,8 +10086,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 6 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2893972419903053877
 Transform:
@@ -9643,7 +10215,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &2951224909542252359
@@ -9701,7 +10273,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2960152782663846047
@@ -9717,7 +10289,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &2977610485623669195
@@ -9736,7 +10308,7 @@ GameObject:
   m_Name: d7 armadura plataforma desafio 6 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3011440235826734059
@@ -9752,7 +10324,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3025662728642697909
@@ -9768,7 +10340,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3045513068946281681
@@ -9815,7 +10387,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3085755780532395158
@@ -10062,6 +10634,12 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.13402128, y: -1.7494122, z: -0.9917178}
     m_Extent: {x: 6.8244953, y: 3.9720578, z: 6.6533875}
   m_DirtyAABB: 0
+--- !u!4 &3190466635097397763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3190466635249255506, guid: 59622c74f391a2f4ca7dcc334cdca1da,
+    type: 3}
+  m_PrefabInstance: {fileID: 158588497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &3209406265246775386
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10184,8 +10762,8 @@ GameObject:
   m_Name: "d6 t\xE1buasponte1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3339847314621869302
 Transform:
@@ -10291,8 +10869,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &3453206917855787071
 MeshCollider:
@@ -10321,7 +10899,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3456138727299751564
@@ -10338,7 +10916,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 1 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3463623417771768804
@@ -10357,8 +10935,8 @@ GameObject:
   m_Name: d3 plataforma 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3479099196947864346
 Transform:
@@ -10389,7 +10967,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &3495114570168048453
@@ -10461,8 +11039,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 5 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &3531042226061968815
 MeshFilter:
@@ -10677,7 +11255,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &3723608705654395667
@@ -10695,7 +11273,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 5 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &3723608705654395668
@@ -10739,7 +11317,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 4 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &3738187572037478015
@@ -10834,8 +11412,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 5 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &3775835413589950242
 MeshFilter:
@@ -10890,7 +11468,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 2 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3855074232342044497
@@ -10930,7 +11508,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3891401222029133302
@@ -11104,7 +11682,7 @@ GameObject:
   m_Name: "d9 armadura vit\xF3rio r\xE9gia desafio 7 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3954098888238754873
@@ -11195,7 +11773,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4067920360038084624
@@ -11214,8 +11792,8 @@ GameObject:
   m_Name: d3 plataforma 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &4068112288964549522
 GameObject:
@@ -11233,7 +11811,7 @@ GameObject:
   m_Name: d7 armadura plataforma desafio 6 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4075120844037997848
@@ -11249,7 +11827,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4101902521574490092
@@ -11265,7 +11843,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &4106149183412381159
@@ -11366,7 +11944,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &4152308423412361026
@@ -11468,7 +12046,7 @@ GameObject:
   m_Name: d12 troncodesafio 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4176766673128936476
@@ -11500,7 +12078,7 @@ GameObject:
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4220058737694856376
@@ -11532,7 +12110,7 @@ GameObject:
   m_Name: d7 plataforma desafio 6 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4276952771723332329
@@ -11680,7 +12258,7 @@ GameObject:
   m_Name: d8 alavancapuzzle2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &4339754280739090399
@@ -11752,8 +12330,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 4 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4372283809177326891
 Transform:
@@ -11933,7 +12511,7 @@ GameObject:
   m_Name: d11 armadura alavanca puzzle 3 para a primeira plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &4485624444694743169
@@ -12008,7 +12586,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &4503131820674045219
@@ -12078,7 +12656,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &4533937507989397917
@@ -12145,7 +12723,7 @@ GameObject:
   m_Name: d12 armadura troncodesafio 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4565034303823475503
@@ -12215,7 +12793,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4666566012070470180
@@ -12350,7 +12928,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &4826842661883364482
@@ -12463,7 +13041,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &4849216590620951201
@@ -12532,7 +13110,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4942533045114220424
@@ -12551,8 +13129,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &4955551458203957105
 GameObject:
@@ -12568,7 +13146,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4956394187931961843
@@ -12584,7 +13162,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &4960118478481229058
@@ -12600,7 +13178,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5018642079590187778
@@ -12616,7 +13194,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5046014058082823715
@@ -12635,7 +13213,7 @@ GameObject:
   m_Name: d8 armadura plataforma de madeira puzzle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &5046014058082823716
@@ -12695,8 +13273,8 @@ GameObject:
   m_Name: d2 tronco3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5076577017679867500
 Transform:
@@ -12728,7 +13306,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 1 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5115943299973355470
@@ -12776,7 +13354,7 @@ GameObject:
   m_Name: arena arvoreentarena 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5163954740438143613
@@ -12793,7 +13371,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &5163954740438143614
@@ -12823,7 +13401,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 5 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &5171754122088042031
@@ -12958,7 +13536,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5218210849865925381
@@ -12976,8 +13554,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 3 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5250940122284011126
 Transform:
@@ -13177,7 +13755,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5542004939088568864
@@ -13284,8 +13862,8 @@ GameObject:
   m_Name: d2 tronco1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &5593453674700773576
 GameObject:
@@ -13300,7 +13878,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5610037521766976791
@@ -13319,8 +13897,8 @@ GameObject:
   m_Name: "d2 vit\xF3ria r\xE9gia desafio de plataforma n\xFAmero 1.1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5611083806365623202
 Transform:
@@ -13350,7 +13928,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5640046930775475148
@@ -13382,7 +13960,7 @@ GameObject:
   m_Name: d12 troncodesafio 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &5654905596549712993
@@ -13441,7 +14019,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &5665150489225156645
@@ -13470,7 +14048,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5707326233214740362
@@ -13502,7 +14080,7 @@ GameObject:
   m_Name: d8 alavancapuzzle2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5762540543365494719
@@ -13519,7 +14097,7 @@ GameObject:
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5859874381002780556
@@ -13759,7 +14337,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5998929237211100651
@@ -13808,8 +14386,8 @@ GameObject:
   m_Name: d3 plataforma 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6039847229889589487
 Transform:
@@ -13840,7 +14418,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6051178960302179684
@@ -13874,9 +14452,15 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 1 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!4 &6054156901966929485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6054156901675266072, guid: c8f8854c22d069b4286569bdba16b69f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1994567253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &6069261035644176649
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13914,7 +14498,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6093705392517164835
@@ -13947,7 +14531,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 4 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &6096183796699035618
@@ -14084,8 +14668,8 @@ GameObject:
   m_Name: "\xE1gua"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &6195821251599140709
 GameObject:
@@ -14100,7 +14684,7 @@ GameObject:
   m_Name: "d9 armadura vit\xF3rio r\xE9gia desafio 7 4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6206941864752466211
@@ -14117,7 +14701,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6213988154647422043
@@ -14202,7 +14786,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6359606846977394257
@@ -14219,7 +14803,7 @@ GameObject:
   m_Name: d5 tocos de madeiradesafio4.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6360104286752254230
@@ -14237,8 +14821,8 @@ GameObject:
   m_Name: d6 ponte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &6389726783754384923
 MeshRenderer:
@@ -14297,7 +14881,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 1 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &6411859610831094756
@@ -14370,7 +14954,7 @@ GameObject:
   m_Name: d8 armadura alavanca puzzle 2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &6419406912202099791
@@ -14414,7 +14998,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 6 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6446211357835570598
@@ -14432,7 +15016,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 3 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6453582672299519910
@@ -14448,7 +15032,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6511735614086739835
@@ -14496,7 +15080,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 4 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &6556720874640762876
@@ -14551,7 +15135,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 3 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6621781474031750447
@@ -14585,8 +15169,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &6634150168612751298
 MeshFilter:
@@ -14612,8 +15196,8 @@ GameObject:
   m_Name: d2 tronco2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!137 &6687833342497191274
 SkinnedMeshRenderer:
@@ -14690,7 +15274,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &6703008974974107785
@@ -14763,8 +15347,8 @@ GameObject:
   m_Name: d10 toco de madeiradesafio 8 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &6737984105033953716
 GameObject:
@@ -14779,7 +15363,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6738687271296209386
@@ -14982,7 +15566,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6838551087886855801
@@ -15043,8 +15627,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 4 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &6856320047116430097
 GameObject:
@@ -15060,7 +15644,7 @@ GameObject:
   m_Name: d11 alavancapuzzle3 2 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6859559725364958199
@@ -15106,7 +15690,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &6902510046494807677
@@ -15211,7 +15795,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6934087172280759967
@@ -15244,7 +15828,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 6 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &6945616187561305210
@@ -15262,7 +15846,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 2 lado direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &6945616187561305211
@@ -15402,7 +15986,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7104781184979051778
@@ -15582,7 +16166,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &7245110957874448408
@@ -15622,7 +16206,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7286349381759276000
@@ -15656,8 +16240,8 @@ GameObject:
   m_Name: "d2 vit\xF3ria r\xE9gia desafio de plataforma n\xFAmero 1.4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7329595497940529341
 Transform:
@@ -15730,7 +16314,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7369903572986740853
@@ -15776,7 +16360,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7498915310092085876
@@ -15807,7 +16391,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &7504708097746144049
@@ -15893,7 +16477,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7620599359089116797
@@ -15981,7 +16565,7 @@ GameObject:
   m_Name: "d4 armadura placa de pres\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7698381998863731093
@@ -16013,7 +16597,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7726766102493358208
@@ -16045,7 +16629,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &7805446821382930603
@@ -16118,8 +16702,8 @@ GameObject:
   m_Name: d3 plataforma 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7824228393281069562
 Transform:
@@ -16249,7 +16833,7 @@ GameObject:
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7928492029352949029
@@ -16343,8 +16927,8 @@ GameObject:
   m_Name: "d6 t\xE1buasponte5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &7980422892007379701
 GameObject:
@@ -16359,7 +16943,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &7983225416252518021
@@ -16430,7 +17014,7 @@ GameObject:
   m_Name: d8 plataforma de madeira puzzle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &8069912946420926960
@@ -16446,7 +17030,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &8073181900597335077
@@ -16521,7 +17105,7 @@ GameObject:
   m_Name: d8 armadura alavanca puzzle 2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &8117983640132458067
@@ -16563,7 +17147,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &8144146846073369459
@@ -16656,7 +17240,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &8172685945582146476
@@ -16773,7 +17357,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &8200690921716776116
 GameObject:
@@ -16788,7 +17372,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &8206837290016831770
@@ -16805,7 +17389,7 @@ GameObject:
   m_Name: d5 armadura tocos de madeiradesafio4.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &8206837290016831771
@@ -16835,7 +17419,7 @@ GameObject:
   m_Name: d7 plataforma desafio 6 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8257612069371338353
@@ -16935,7 +17519,7 @@ GameObject:
   m_Name: d7 armadura plataforma desafio 6 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &8316564859911243645
@@ -17026,7 +17610,7 @@ GameObject:
   m_Name: d12 armadura troncodesafio 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &8395065081682675727
@@ -17061,7 +17645,7 @@ GameObject:
   m_Name: d12 troncodesafio 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8431485488319882632
@@ -17175,8 +17759,8 @@ GameObject:
   m_Name: "d2 vit\xF3ria r\xE9gia desafio de plataforma n\xFAmero 1.3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &8528790987258365439
 MeshRenderer:
@@ -17233,7 +17817,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &8532348725980195550
@@ -17356,7 +17940,7 @@ GameObject:
   m_Name: "d9 vit\xF3ria r\xE9gia desafio de plataforma 7 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &8559133879409254599
@@ -17400,7 +17984,7 @@ GameObject:
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!137 &8590174395852808024
@@ -17626,8 +18210,8 @@ GameObject:
   m_Name: "d2 vit\xF3ria r\xE9gia desafio de plataforma n\xFAmero 1.005"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &8642914949551774704
 GameObject:
@@ -17642,7 +18226,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8648152347375726913
@@ -17775,7 +18359,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &8695891476301756473
@@ -17793,7 +18377,7 @@ GameObject:
   m_Name: d11 alavanca puzzle 3 para a primeira plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &8695891476301756474
@@ -17979,7 +18563,7 @@ GameObject:
   m_Name: d4 plataformapuzzle 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &8818494715040146088
@@ -17997,8 +18581,8 @@ GameObject:
   m_Name: d11 base da alavancapuzzle3 3 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &8825001813312457421
 GameObject:
@@ -18013,7 +18597,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8870449931929467182
@@ -18089,7 +18673,7 @@ GameObject:
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8970793774109803731
@@ -18150,7 +18734,7 @@ GameObject:
   m_Name: d11 armadura alavancapuzzle3 3 lado esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &8988884231798363967
@@ -18276,7 +18860,7 @@ GameObject:
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &9217431600630790824

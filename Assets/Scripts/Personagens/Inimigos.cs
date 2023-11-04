@@ -8,6 +8,7 @@ public class Inimigos : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float dano = 20f;
+    public float gravity = 9.81f;
     public float rotateSpeed = 5f; 
     private CharacterController controller;
     private Vector3 moveDirection;
@@ -61,6 +62,11 @@ public class Inimigos : MonoBehaviour
         Vector3 targetDirection = (closestPlayer.transform.position - transform.position).normalized;
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
+        if (!controller.isGrounded)
+        {
+            moveDirection.y -= gravity * Time.deltaTime;
+        }
 
         moveDirection = targetDirection * moveSpeed;
 
