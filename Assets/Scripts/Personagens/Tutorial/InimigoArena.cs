@@ -15,6 +15,7 @@ public class InimigoArena : MonoBehaviour
     private bool isTouching = false;
     private float vida = 400;
     public GameObject porta;
+    public float portaYCoordinate = 25f;
     private GameObject[] players;
     private float gravity = 9.81f;
     private Vector3 acceleration = Vector3.zero;
@@ -140,7 +141,7 @@ public class InimigoArena : MonoBehaviour
             Destroy(this.gameObject);
             if (porta != null)
             {
-                porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
+                porta.transform.position = new Vector3(porta.transform.position.x, portaYCoordinate, porta.transform.position.z);
             }
         }
     }
@@ -154,7 +155,7 @@ public class InimigoArena : MonoBehaviour
             Destroy(this.gameObject);
             if (porta != null)
             {
-                porta.transform.position = new Vector3(porta.transform.position.x, 25f, porta.transform.position.z);
+                porta.transform.position = new Vector3(porta.transform.position.x, portaYCoordinate, porta.transform.position.z);
             }
         }
     }

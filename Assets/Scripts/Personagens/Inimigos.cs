@@ -9,7 +9,7 @@ public class Inimigos : MonoBehaviour
     public float moveSpeed = 20f;
     public float dano = 20f;
     public float gravity = 9.81f;
-    public float rotateSpeed = 5f; 
+    public float rotateSpeed = 5f;
     private CharacterController controller;
     private Vector3 moveDirection;
     private PlayerController2 playerController2;
@@ -17,13 +17,15 @@ public class Inimigos : MonoBehaviour
     private bool isTouching = false;
     private float vida = 100;
 
+    private float verticalVelocity = 0; // Variable for handling vertical velocity due to gravity
+
     private Animator anim;
 
     void Start()
     {
         vida = 100;
         controller = GetComponent<CharacterController>();
-        StartCoroutine(nameof(DanoInimigo));
+        StartCoroutine(DanoInimigo());
         anim = GetComponent<Animator>();
     }
 
@@ -65,10 +67,15 @@ public class Inimigos : MonoBehaviour
 
         if (!controller.isGrounded)
         {
-            moveDirection.y -= gravity * Time.deltaTime;
+            verticalVelocity -= gravity * Time.deltaTime; // Apply gravity
+        }
+        else
+        {
+            verticalVelocity = 0; // Reset vertical velocity when grounded
         }
 
         moveDirection = targetDirection * moveSpeed;
+        moveDirection.y = verticalVelocity; // Apply vertical velocity
 
         controller.Move(moveDirection * Time.deltaTime);
 
@@ -105,10 +112,6 @@ public class Inimigos : MonoBehaviour
         {
             anim.SetBool("Attack", true);
         }
-        else
-        {
-            anim.SetBool("Attack", false);
-        }
     }
 
     public IEnumerator DanoInimigo()
@@ -138,4 +141,3 @@ public class Inimigos : MonoBehaviour
         }
     }
 }
-    

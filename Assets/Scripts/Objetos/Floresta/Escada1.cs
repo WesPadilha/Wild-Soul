@@ -21,7 +21,7 @@ public class Escada1 : MonoBehaviour
         if (!Aberto)
         {
             Aberto = true;
-            Escada.transform.position += new Vector3(0f, 4.9f, 0f);
+            Escada.transform.position += new Vector3(0f, -30f, 0f);
         }
     }
 

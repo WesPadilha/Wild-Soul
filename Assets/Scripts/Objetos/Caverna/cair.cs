@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cair : MonoBehaviour
 {
     private bool isFalling = false;
-    private float downSpeed = 0.0f;
+    private float downSpeed = 5f;
 
     // Variável para controlar o atraso antes de começar a cair.
     private float delayBeforeFalling = 1.0f;
@@ -38,6 +38,5 @@ public class Cair : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeFalling);
 
         isFalling = true;
-        Destroy(gameObject, 10.0f);
     }
 }

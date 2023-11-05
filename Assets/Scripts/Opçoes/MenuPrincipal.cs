@@ -11,7 +11,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("Cutscene");
     }
 
     public void Options()
