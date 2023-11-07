@@ -8,6 +8,8 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private string gameNameLevel;
     [SerializeField] private GameObject MenuInicial;
     [SerializeField] private GameObject Opcoes;
+    [SerializeField]
+    private LevelControllerOptions levelControllerOptions;
 
     public void Play()
     {

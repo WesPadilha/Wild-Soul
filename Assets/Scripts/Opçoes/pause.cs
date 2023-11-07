@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class pause : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    [SerializeField]
+    private CheckPointOption checkpoints;
 
     public GameObject pauseMenuUI;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -30,6 +33,11 @@ public class pause : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         
+    }
+
+    public void ResetCheckPoints()
+    {
+        checkpoints.spawnPosition = checkpoints.initialPosition;
     }
     void Pause ()
     {

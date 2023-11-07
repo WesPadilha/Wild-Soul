@@ -1,0 +1,6 @@
+public class LevelState
+{
+    public int Index {  get; set; }
+    public string Name { get; set; }
+    public bool IsComplete { get; set; }
+}

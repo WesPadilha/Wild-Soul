@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Placa : MonoBehaviour
 {
-    public Animator Animate;
     [SerializeField]
     GameObject Espinhos;
 
@@ -23,13 +22,6 @@ public class Placa : MonoBehaviour
         {
             Aberto = true;
             Espinhos.transform.position += new Vector3(0f, -10f, 0f);
-            Animate.SetBool("Placa", true);
-            Animate.SetBool("Espinho", true);
-        }
-        else
-        {
-            Animate.SetBool("Placa", false);
-            Animate.SetBool("Espinho", false);
         }
     }
 
